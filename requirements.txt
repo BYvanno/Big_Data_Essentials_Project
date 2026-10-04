@@ -1,0 +1,7 @@
+pyspark==3.5.8
+kafka-python
+pandas
+numpy
+pymysql
+Django==4.2.30
+jupyter

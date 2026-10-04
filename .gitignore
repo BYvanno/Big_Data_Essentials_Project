@@ -1,0 +1,20 @@
+# Large generated dataset - recreate with scripts/generate_dataset.ipynb
+/customer_behavior.csv
+# Spark temp, checkpoints and local metastore
+spark-tmp/
+checkpoint/
+checkpoints/
+metastore_db/
+derby.log
+# Python and Jupyter
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+# Secrets, local databases, logs
+.env
+dashboard/db.sqlite3
+*.log
+# Editor and OS files
+.vscode/
+Thumbs.db
+.DS_Store
