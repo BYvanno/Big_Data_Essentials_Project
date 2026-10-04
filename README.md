@@ -3,17 +3,19 @@
 **Big Data Essentials - Course Project (Group VI)**
 Adventist University of Central Africa (AUCA), Faculty of Information Technology
 
-Group members: BYIRINGIRO Elie Yvan, KINANIRA NTWARI Christian, NDAYISHIMIYE Patience
+**Group members:** BYIRINGIRO Elie Yvan, KINANIRA NTWARI Christian, NDAYISHIMIYE Patience (IDs in [GROUP_MEMBERS.md](GROUP_MEMBERS.md))
 
-An end-to-end big data pipeline that generates 3,000,000 customer interaction records, stores them in **HDFS**, streams them through **Apache Kafka**, processes them with **PySpark**, trains a **Spark MLlib** Logistic Regression model, stores predictions in **MySQL** and shows them on a **Django** dashboard.
+An end-to-end big data pipeline that generates 3,000,000 customer interaction records, stores them in HDFS, streams them through Apache Kafka, processes them with PySpark, trains a Spark MLlib Logistic Regression model, stores predictions in MySQL and shows them on a Django dashboard.
 
-![Architecture](docs/architecture.png)
+![Architecture diagram](docs/architecture.png)
 
 ## Repository structure
 
 ```
 .
 ├── README.md
+├── GROUP_MEMBERS.md                     group members and student IDs
+├── BigData_GroupVI_Final_Report.docx    full project report
 ├── requirements.txt
 ├── scripts/
 │   ├── generate_dataset.ipynb   Step 1  - generates the 3,000,000-row CSV
@@ -23,12 +25,11 @@ An end-to-end big data pipeline that generates 3,000,000 customer interaction re
 ├── data/
 │   └── sample_customer_behavior.csv   first 1,000 rows of the dataset
 └── docs/
-    ├── BigData_GroupVI_Final_Report.docx   full project report
     ├── architecture.png
     └── screenshots/             evidence of each stage
 ```
 
-The dataset (`customer_behavior.csv`, 291 MB) is **not** stored in the repository because it exceeds GitHub's 100 MB file limit. Run `scripts/generate_dataset.ipynb` to recreate it (seed 42); a 1,000-row sample is in `data/`.
+The dataset (`customer_behavior.csv`, 291 MB) is not stored in the repository because it exceeds GitHub's 100 MB file limit. Run `scripts/generate_dataset.ipynb` to recreate it (seed 42); a 1,000-row sample is in `data/`.
 
 ## Technologies and versions
 
@@ -40,7 +41,7 @@ The dataset (`customer_behavior.csv`, 291 MB) is **not** stored in the repositor
 | Apache Hadoop (HDFS) | 3.3.6 |
 | Apache Kafka | 3.8.0 (Scala 2.13), Zookeeper 3.8.4 |
 | Apache Spark / PySpark / MLlib | 3.5.8 (Scala 2.12) |
-| Spark-Kafka connector | `org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.8` |
+| Spark-Kafka connector | org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.8 |
 | MariaDB (XAMPP, MySQL-compatible) | 10.4.32 |
 | Django | 4.2.30 |
 
@@ -81,4 +82,4 @@ The pipeline works end to end with no records lost. The model predicts no better
 
 ## Documentation
 
-The full report is in [`docs/BigData_GroupVI_Final_Report.docx`](docs/BigData_GroupVI_Final_Report.docx).
+The full report is in [BigData_GroupVI_Final_Report.docx](BigData_GroupVI_Final_Report.docx).
