@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Behavior Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f6f8; margin: 0; padding: 20px; }
+        h1 { color: #2c3e50; text-align: center; }
+        .cards { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 30px 0; }
+        .card { background: white; border-radius: 10px; padding: 25px 35px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; min-width: 180px; }
+        .card h2 { margin: 0; font-size: 2em; color: #2980b9; }
+        .card p { margin: 5px 0 0; color: #7f8c8d; font-size: 0.95em; }
+        table { width: 80%; margin: 0 auto; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        th { background: #2980b9; color: white; padding: 12px; }
+        td { padding: 12px; text-align: center; border-bottom: 1px solid #ecf0f1; }
+        tr:last-child td { border-bottom: none; }
+        .footer { text-align: center; margin-top: 30px; color: #95a5a6; font-size: 0.85em; }
+    </style>
+</head>
+<body>
+    <h1>Customer Behavior Prediction Dashboard</h1>
+
+    <div class="cards">
+        <div class="card">
+            <h2>{{ total }}</h2>
+            <p>Total Records</p>
+        </div>
+        <div class="card">
+            <h2>{{ predicted_buy }}</h2>
+            <p>Predicted to Buy</p>
+        </div>
+        <div class="card">
+            <h2>{{ predicted_not_buy }}</h2>
+            <p>Predicted Not to Buy</p>
+        </div>
+        <div class="card">
+            <h2>{{ actual_buy }}</h2>
+            <p>Actually Bought</p>
+        </div>
+        <div class="card">
+            <h2>{{ actual_not_buy }}</h2>
+            <p>Actually Did Not Buy</p>
+        </div>
+    </div>
+
+    <table>
+        <tr>
+            <th>Metric</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Total Records Analyzed</td>
+            <td>{{ total }}</td>
+        </tr>
+        <tr>
+            <td>Predicted to Purchase</td>
+            <td>{{ predicted_buy }}</td>
+        </tr>
+        <tr>
+            <td>Predicted Not to Purchase</td>
+            <td>{{ predicted_not_buy }}</td>
+        </tr>
+        <tr>
+            <td>Actual Purchases</td>
+            <td>{{ actual_buy }}</td>
+        </tr>
+        <tr>
+            <td>Actual Non-Purchases</td>
+            <td>{{ actual_not_buy }}</td>
+        </tr>
+    </table>
+
+    <div class="footer">
+        <p>Big Data Essentials Project — Customer Behavior Prediction Pipeline</p>
+    </div>
+</body>
+</html>
